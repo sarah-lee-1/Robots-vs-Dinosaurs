@@ -1,6 +1,9 @@
+from typing import AsyncIterable
+from r_weapons import Weapon 
 class Robot:
-    def __init__(self, name)
+    def __init__(self, name):
         self.name = name 
-        self.health = 100
-        weapon = weapon("sword", 10)
-        
+        self.health = []       
+        self.attack_power = Weapon()
+
+ 
