@@ -8,38 +8,47 @@ class Battlefield:
         self.name = name 
 
     def run_game(self):
-        pass
+        self.name = name 
     
+    def welcome_player(self):
+        print("Welcome to Robots vs. Dinosaurs") 
+        print("Please choose your fighter")
+        choose_fighter = input("Would you like to be Robot? ")
+        # Robot will be proposed by default
+        if choose_fighter == ("yes"): 
+            # instantiate Robot
+            self.robot_list.append(robot1)
+            print("You have chosen Robot") 
+        else:
+            choose_fighter == ("no")
+             # instantiate Dinosaur 
+            self.dinosaur_list.append(dino1) 
+            print("You have chosen Dinosuar")
+
     def battle(self):
         self.name = name 
-        
-    def robot_go(self, robot):
-        pass
+        print("You will fight on the Waterloo battlefield")
+         
+    # def robot_go(self, robot):
+        self.name = name
+        # attack health
+        # pass
     
-    def dinosaur_go(self, dinosaur):
-        pass
+    # def dinosaur_go(self, dinosaur):
+        self.name = name 
+        #  attack health 
+        # pass
     
     def robot_play_options(self):
-        pass 
+        robot.strike_play.append(attack)
+         
         
     def dinosaur_play_options(self):
-        pass 
+        dinosaur.strike_play.append(attack) 
+        # loop
+        # stop loop when one player reaches 0
     
     def announce_winner(self):
+        print() # print player with >0 points to console
+        # ("Congratulations. 'Robot' or 'Dinosaur' has won this round")
         pass
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-  
