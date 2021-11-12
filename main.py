@@ -1,7 +1,8 @@
 # Import Battlefied
-# Instantiate Battlefied
-# Run Game 
+from battlefield import Battlefield
 
-# Test of github
-Run Game: 
-    
+# Instantiate Battlefied
+waterloo = Battlefield()
+
+# Run Game 
+waterloo.run_game()    
