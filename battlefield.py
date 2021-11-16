@@ -6,7 +6,7 @@ class Battlefield:
         self.herd = Herd() 
         # print(self.herd)
 
-    def run_game(self, name):
+    def run_game(self):  #(self, name) 
         self.welcome_player() 
         self.battle() 
         self.display_winners()
@@ -14,29 +14,34 @@ class Battlefield:
     def welcome_player(self):
         print("Welcome to Robots vs. Dinosaurs. ") 
         print("You will fight on the Waterloo battlefield")
-        
-    def battle(self):
-  
-        #1 choose fighters
-        dino = Battlefield.show_dino_opponent_options()
-        robo = Battlefield.show_robo_opponent_options()
-            
-        #2 fight against
-            
-        
-        #3 check health 
-        # remove from list 
-        while( len(self.fleet.robot.health) > 0 and len(self.herd.dinosaur_list) > 0):
-            (len(self.fleet.self.health)) 
+    
+    def battle(self): 
+        print("Please choose a fighter. ")
+        #1 choose fighter
+        # robo = self.show_robo_opponent_options()
+        self.show_dino_opponent_options()
         
         # while fleet and herd still have members
-        while( len(self.fleet.robot_list) > 0 and len(self.herd.dinosaur_list) > 0):
-            Battlefield.robo_turn()
-        else:
-            Battlefield.dino_turn() 
-            
+        while(len(self.fleet.robot_list) > 0 and len(self.herd.dinosaur_list) > 0):
+            #2 fight against   
+            self.dino_turn()
+            self.robo_turn() 
         
-        pass    
+            # check health 
+            print('robo health', robo.health)
+            print('dino health', dino.health)
+        
+            # remove from list 
+            if (len(dino_item = [0, -1])):
+                self.herd.dinosaur_list.remove() 
+            elif (len(robo_item = [0, -1])):
+                self.fleet.robot_list.remove() 
+            
+        # end battle when one fighter reaches 0 points. 
+        self.display_winners   
+
+    # battle() 
+   
 
 
     def dino_turn(self, dinosaur):
@@ -55,15 +60,17 @@ class Battlefield:
             print(item, ") - ", dino.name)
             item += 1
         user_input = int(input("\nPlease choose a dinosaur: "))
-        return self.herd.dinosaur_list[user_input]
+        return user_input
+        # return self.herd.dinosaur_list[user_input]
         
     def show_robo_opponent_options(self):
         item = 0
-        for robo in self.fleet.robot_list
+        for robo in self.fleet.robot_list:
             print(item, ") - ",robo.name)
             item += 1
         user_input = int(input("\nPlease choose a robot: "))
-        return self.fleet.robot_list[user_input]
+        return user_input
+        # return self.fleet.robot_list[user_input]
     
 
     def display_winners(self):
