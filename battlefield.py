@@ -1,54 +1,74 @@
-from robots import Robot
-from weapon import Weapon
-from dinosaurs import Dinosaur 
-from weapon import Weapon 
-
+from fleet import Fleet
+from herd import Herd  
 class Battlefield:
-    def __init__(self, name):
-        self.name = name 
+    def __init__(self):
+        self.fleet = Fleet()
+        self.herd = Herd() 
+        # print(self.herd)
 
-    def run_game(self):
-        self.name = name 
+    def run_game(self, name):
+        self.welcome_player() 
+        self.battle() 
+        self.display_winners()
     
     def welcome_player(self):
-        print("Welcome to Robots vs. Dinosaurs") 
-        print("Please choose your fighter")
-        choose_fighter = input("Would you like to be Robot? ")
-        # Robot will be proposed by default
-        if choose_fighter == ("yes"): 
-            # instantiate Robot
-            self.robot_list.append(robot1)
-            print("You have chosen Robot") 
-        else:
-            choose_fighter == ("no")
-             # instantiate Dinosaur 
-            self.dinosaur_list.append(dino1) 
-            print("You have chosen Dinosuar")
-
-    def battle(self):
-        self.name = name 
+        print("Welcome to Robots vs. Dinosaurs. ") 
         print("You will fight on the Waterloo battlefield")
-         
-    # def robot_go(self, robot):
-        self.name = name
-        # attack health
-        # pass
-    
-    # def dinosaur_go(self, dinosaur):
-        self.name = name 
-        #  attack health 
-        # pass
-    
-    def robot_play_options(self):
-        robot.strike_play.append(attack)
-         
         
-    def dinosaur_play_options(self):
-        dinosaur.strike_play.append(attack) 
-        # loop
-        # stop loop when one player reaches 0
+    def battle(self):
+  
+        #1 choose fighters
+        dino = Battlefield.show_dino_opponent_options()
+        robo = Battlefield.show_robo_opponent_options()
+            
+        #2 fight against
+            
+        
+        #3 check health 
+        # remove from list 
+        while( len(self.fleet.robot.health) > 0 and len(self.herd.dinosaur_list) > 0):
+            (len(self.fleet.self.health)) 
+        
+        # while fleet and herd still have members
+        while( len(self.fleet.robot_list) > 0 and len(self.herd.dinosaur_list) > 0):
+            Battlefield.robo_turn()
+        else:
+            Battlefield.dino_turn() 
+            
+        
+        pass    
+
+
+    def dino_turn(self, dinosaur):
+        defending_robo = self.show_robo_opponent_options()
+        dinosaur.attack(defending_robo)
     
-    def announce_winner(self):
-        print() # print player with >0 points to console
-        # ("Congratulations. 'Robot' or 'Dinosaur' has won this round")
-        pass
+    
+    def robo_turn(self, robot): 
+        defending_dino = self.show_dino_opponent_options()
+        robot.attack(defending_dino)
+        
+
+    def show_dino_opponent_options(self): 
+        item = 0
+        for dino in self.herd.dinosaur_list:
+            print(item, ") - ", dino.name)
+            item += 1
+        user_input = int(input("\nPlease choose a dinosaur: "))
+        return self.herd.dinosaur_list[user_input]
+        
+    def show_robo_opponent_options(self):
+        item = 0
+        for robo in self.fleet.robot_list
+            print(item, ") - ",robo.name)
+            item += 1
+        user_input = int(input("\nPlease choose a robot: "))
+        return self.fleet.robot_list[user_input]
+    
+
+    def display_winners(self):
+        if (len(self.fleet.robot_list) > 0 ):
+            print("Robot has won the battle. ")
+        else:
+            (len(self.herd.dinosaur_list) > 0)
+            print("Dinosaur has won the battle. ")

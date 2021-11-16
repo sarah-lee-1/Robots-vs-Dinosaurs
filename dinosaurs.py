@@ -9,3 +9,22 @@ class Dinosaur:
     def attack(self, robot):
         robot.health -= self.attack_power
         # robot.health = robot.health - self.weapon.attack_power 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+        
+#dino1 = (Triceratops)
+#dino2 = (T-Rex)
+#dino3 = (Velociraptor)

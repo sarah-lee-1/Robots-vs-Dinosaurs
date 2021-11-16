@@ -1,7 +1,8 @@
 from dinosaurs import Dinosaur 
 class Herd:
     def __init__(self):
-        self.dinosaur_list = [] 
+        self.dinosaur_list = []
+        self.create_herd()
     
     def create_herd(self):
         dino1 = Dinosaur("Triceratops")
